@@ -10,4 +10,4 @@ Create “HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\De
 
 Host: Windbg-> attach  to kernel-> COM -> \\.\pipe\windbg
 
-sc create test type=kernel binPath="\Shared Folders\Windbg-Dev\Test\x64\Debug\Test.sys"
+sc create dbgtest type=kernel binPath="\\vmware-host\Shared Folders\Windbg-Dev\Test\x64\Debug\Test.sys"
