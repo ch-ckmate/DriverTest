@@ -1,5 +1,6 @@
-# DriverTest
+# Ofsec Driver
 
+#### Setup
 Vmware win10:
 bcdedit /debug on
 bcdedit /set testsigning on
