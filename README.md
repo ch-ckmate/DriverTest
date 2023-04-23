@@ -9,3 +9,5 @@ bcdedit /dbgsettings serial debugport:2 baudrate:115200 (check serial port)
 Create “HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Debug Print Filter”, Add value “DEFAULT” : REG_DWORD : 0xFFFFFFFF and then reboot.
 
 Host: Windbg-> attach  to kernel-> COM -> \\.\pipe\windbg
+
+sc create test type=kernel binPath="\Shared Folders\Windbg-Dev\Test\x64\Debug\Test.sys"
