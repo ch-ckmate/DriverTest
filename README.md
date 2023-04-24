@@ -13,3 +13,5 @@ Create “HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\De
 Host: Windbg-> attach  to kernel-> COM -> \\.\pipe\windbg
 
 sc create dbgtest type=kernel binPath="\\vmware-host\Shared Folders\Windbg-Dev\Test\x64\Debug\Test.sys"
+
+[Offset Library](https://www.vergiliusproject.com/)
