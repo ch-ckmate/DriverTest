@@ -234,3 +234,61 @@ EPROCESS - Win10 22H2
    +0xa10 DynamicEnforcedCetCompatibleRanges : _PS_DYNAMIC_ENFORCED_ADDRESS_RANGES
    +0xa20 DisabledComponentFlags : Uint4B
    +0xa28 PathRedirectionHashes : Ptr64 Uint4B
+   
+   
+   
+ TOKEN - Win10 22H2
+   +0x000 TokenSource      : _TOKEN_SOURCE
+   +0x010 TokenId          : _LUID
+   +0x018 AuthenticationId : _LUID
+   +0x020 ParentTokenId    : _LUID
+   +0x028 ExpirationTime   : _LARGE_INTEGER
+   +0x030 TokenLock        : Ptr64 _ERESOURCE
+   +0x038 ModifiedId       : _LUID
+   +0x040 Privileges       : _SEP_TOKEN_PRIVILEGES
+   +0x058 AuditPolicy      : _SEP_AUDIT_POLICY
+   +0x078 SessionId        : Uint4B
+   +0x07c UserAndGroupCount : Uint4B
+   +0x080 RestrictedSidCount : Uint4B
+   +0x084 VariableLength   : Uint4B
+   +0x088 DynamicCharged   : Uint4B
+   +0x08c DynamicAvailable : Uint4B
+   +0x090 DefaultOwnerIndex : Uint4B
+   +0x098 UserAndGroups    : Ptr64 _SID_AND_ATTRIBUTES
+   +0x0a0 RestrictedSids   : Ptr64 _SID_AND_ATTRIBUTES
+   +0x0a8 PrimaryGroup     : Ptr64 Void
+   +0x0b0 DynamicPart      : Ptr64 Uint4B
+   +0x0b8 DefaultDacl      : Ptr64 _ACL
+   +0x0c0 TokenType        : _TOKEN_TYPE
+   +0x0c4 ImpersonationLevel : _SECURITY_IMPERSONATION_LEVEL
+   +0x0c8 TokenFlags       : Uint4B
+   +0x0cc TokenInUse       : UChar
+   +0x0d0 IntegrityLevelIndex : Uint4B
+   +0x0d4 MandatoryPolicy  : Uint4B
+   +0x0d8 LogonSession     : Ptr64 _SEP_LOGON_SESSION_REFERENCES
+   +0x0e0 OriginatingLogonSession : _LUID
+   +0x0e8 SidHash          : _SID_AND_ATTRIBUTES_HASH
+   +0x1f8 RestrictedSidHash : _SID_AND_ATTRIBUTES_HASH
+   +0x308 pSecurityAttributes : Ptr64 _AUTHZBASEP_SECURITY_ATTRIBUTES_INFORMATION
+   +0x310 Package          : Ptr64 Void
+   +0x318 Capabilities     : Ptr64 _SID_AND_ATTRIBUTES
+   +0x320 CapabilityCount  : Uint4B
+   +0x328 CapabilitiesHash : _SID_AND_ATTRIBUTES_HASH
+   +0x438 LowboxNumberEntry : Ptr64 _SEP_LOWBOX_NUMBER_ENTRY
+   +0x440 LowboxHandlesEntry : Ptr64 _SEP_CACHED_HANDLES_ENTRY
+   +0x448 pClaimAttributes : Ptr64 _AUTHZBASEP_CLAIM_ATTRIBUTES_COLLECTION
+   +0x450 TrustLevelSid    : Ptr64 Void
+   +0x458 TrustLinkedToken : Ptr64 _TOKEN
+   +0x460 IntegrityLevelSidValue : Ptr64 Void
+   +0x468 TokenSidValues   : Ptr64 _SEP_SID_VALUES_BLOCK
+   +0x470 IndexEntry       : Ptr64 _SEP_LUID_TO_INDEX_MAP_ENTRY
+   +0x478 DiagnosticInfo   : Ptr64 _SEP_TOKEN_DIAG_TRACK_ENTRY
+   +0x480 BnoIsolationHandlesEntry : Ptr64 _SEP_CACHED_HANDLES_ENTRY
+   +0x488 SessionObject    : Ptr64 Void
+   +0x490 VariablePart     : Uint8B
+
+
+_SEP_TOKEN_PRIVILEGES - Win10 22H2
+   +0x000 Present          : Uint8B
+   +0x008 Enabled          : Uint8B
+   +0x010 EnabledByDefault : Uint8B
